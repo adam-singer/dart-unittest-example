@@ -60,11 +60,36 @@ fakeTests() {
   }); 
 }
 
+testFormat() {
+  bool testData; 
+  // Initialize the data to be tested. 
+  setUpData() {
+    testData = false;
+  }
+  // A collection of unit tests
+  group('Test Group Name', () {  
+    // Define a test
+    test('Test Name 1', () {
+      setUpData();
+      // Test some data
+      Expect.isFalse(testData);
+      testData = true; 
+      Expect.isTrue(testData);
+    });
+    // Define another test
+    test('Test Name 2', () {
+      setUpData();
+      // Test some data
+      Expect.isTrue(testData);
+    });
+  });
+}
+
 void main() {
   new vector2Test().run();
   
   fakeTests();
-
+  testFormat();
   // Run DARTest
   new DARTest().run();
 }

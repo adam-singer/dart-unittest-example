@@ -1,8 +1,10 @@
 #import('dart:html');
 #import('../../third_party/unittest/unittest_dartest.dart');
 #import('../../third_party/dartest/dartest.dart');
+#import('../../src/vector.dart');
 //#import('/Users/adam/dart_bleeding/dart/client/testing/unittest/unittest_dartest.dart');
 //#import('/Users/adam/dart_bleeding/dart/client/testing/dartest/dartest.dart');
+#source('vector2Tests.dart');
 
 class vector2Test {
 
@@ -90,6 +92,7 @@ void main() {
   
   fakeTests();
   testFormat();
+  new vector2Tests().run();
   // Run DARTest
   new DARTest().run();
 }
